@@ -14,17 +14,22 @@
     background-color: #6E36F7;
 }
 
+h1 {
+    color: #ffa9bc;
+    font-size: 37px;
+    margin-top: 30px;
+}
+
 ul, li {
     list-style: none; /* Убираем точки */
 }
 
 /* Стили для вертикального меню */
 .horizontal-menu {
-    display: flex; /* Используем flexbox */
-    flex-direction: row; /* Горизонтальное направление */
-    justify-content: flex-end; /* Центрируем элементы */
-    background-color: #333; /* Фон меню */
-    padding: 10px 0;
+    display: flex; /* Flexbox для меню */
+    flex-direction: row; /* Горизонтальная ориентация */
+    justify-content: flex-end; /* Выравниваем элементы по правому краю */
+    padding: 10px 20px; /* Внутренние отступы у контейнера */
 }
 
 .horizontal-menu li {
@@ -37,10 +42,22 @@ ul, li {
     font-size: 16px;
     font-weight: bold;
     padding: 10px 15px;
+    position: relative; /* Для позиционирования стрелочек */
+    display: inline-flex; /* Для размещения текста и иконки */
+    align-items: center; /* Выравнивание текста и иконки */
+    gap: 5px; /* Расстояние между текстом и иконкой */
     transition: background-color 0.3s ease; /* Эффект при наведении */
 }
 
 .horizontal-menu a:hover {
     background-color: #555;
     border-radius: 5px; /* Закругленные углы при наведении */
+}
+
+.horizontal-menu a:hover .icon svg {
+    fill: #ccc; /* Изменение цвета стрелки при наведении */
+}
+
+.horizontal-menu a .icon svg {
+    transition: fill 0.3s ease; /* Плавное изменение цвета стрелки */
 }
