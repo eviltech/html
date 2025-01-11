@@ -90,7 +90,10 @@ ul, li {
 
 /* Секция поиска */
 .search-nav {
-    margin-top: 20px;
+    margin-top: 15px;
+    display: flex;
+    align-items: stretch;  /* Растягиваем элементы по высоте */
+    gap: 10px; /* Отступ между формой и кнопкой */
 }
 
 .search-form {
@@ -101,6 +104,7 @@ ul, li {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     gap: 10px;
+    flex-grow: 1; /* Форма будет растягиваться по ширине */
 }
 
 /* Группы полей ввода */
@@ -218,17 +222,27 @@ ul, li {
     fill: #007bff; /* Цвет иконки при наведении */
 }
 
+/* Кнопка "Найти" */
 .search-button {
-    background-color: #d32f2f;
+    padding: 10px 20px;
+    background-color: #f74068; /* Цвет кнопки */
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
+/* Эффект при наведении на кнопку "Найти" */
 .search-button:hover {
-    background-color: #b71c1c;
+    background-color: #e52f53; /* Немного темнее для эффекта наведения */
+}
+
+/* Дополнительные стили для кнопки */
+.search-button {
+    white-space: nowrap; /* Предотвращаем перенос текста */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем текст по вертикали и горизонтали */
 }
