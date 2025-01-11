@@ -4,11 +4,13 @@
     padding: 0;
 }
 
+/* Общий контейнер */
 .container {
     max-width: 1140px;
     margin: 0 auto;
 }
 
+/* Стили для заголовка */
 .header {
     min-height: 400px;
     background-color: #6E36F7;
@@ -18,66 +20,75 @@ h1 {
     color: #ffa9bc;
     font-size: 37px;
     margin-top: 30px;
+    text-align: left;
 }
 
+/* Сброс списка */
 ul, li {
-    list-style: none; /* Убираем точки */
+    list-style: none;
 }
 
-/* Стили для вертикального меню */
+/* Горизонтальное меню */
 .horizontal-menu {
-    display: flex; /* Flexbox для меню */
-    flex-direction: row; /* Горизонтальная ориентация */
-    justify-content: flex-end; /* Выравниваем элементы по правому краю */
-    padding: 10px 20px; /* Внутренние отступы у контейнера */
-}
-
-.horizontal-menu li {
-    margin: 0 15px; /* Расстояние между пунктами меню */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    gap: 15px; /* Расстояние между элементами меню */
 }
 
 .horizontal-menu a {
-    text-decoration: none; /* Убираем подчеркивание */
+    text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 15px;
-    position: relative; /* Для позиционирования стрелочек */
-    display: inline-flex; /* Для размещения текста и иконки */
-    align-items: center; /* Выравнивание текста и иконки */
-    gap: 5px; /* Расстояние между текстом и иконкой */
-    transition: background-color 0.3s ease; /* Эффект при наведении */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .horizontal-menu a:hover {
     background-color: #555;
-    border-radius: 5px; /* Закругленные углы при наведении */
+    color: #ccc;
+}
+
+/* Стили иконки в меню */
+.horizontal-menu a .icon svg {
+    transition: fill 0.3s ease;
 }
 
 .horizontal-menu a:hover .icon svg {
-    fill: #ccc; /* Изменение цвета стрелки при наведении */
+    fill: #ccc;
 }
 
-.horizontal-menu a .icon svg {
-    transition: fill 0.3s ease; /* Плавное изменение цвета стрелки */
-}
-
-.header_buttons {
+/* Кнопки в заголовке */
+.header-buttons {
     margin-top: 30px;
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+    justify-content: flex-start;
 }
 
-.header_buttons .header_button {
+.header-button {
     min-width: 100px;
     height: 30px;
-    margin-right: 10px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    mask-image: none;
     border: none;
+    border-radius: 25px;
     background-color: #8853dd;
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
+.header-button:hover {
+    background-color: #6a1b9a;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Секция поиска */
 .search-nav {
     margin-top: 20px;
 }
@@ -90,9 +101,9 @@ ul, li {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     gap: 10px;
-    margin-left: 0; /* Позиционирование формы от левого края */
 }
 
+/* Группы полей ввода */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -106,36 +117,61 @@ ul, li {
 }
 
 .input-group input {
-    border: none;
     padding: 8px;
     font-size: 14px;
     color: #333;
+    background-color: transparent; /* Убираем фон */
+    border: none; /* Убираем рамки */
+    border-radius: 0; /* Убираем скругления */
 }
 
+/* Убираем обводку при фокусе */
 .input-group input:focus {
-    border-bottom-color: #6a1b9a;
     outline: none;
+    box-shadow: none; /* Убираем тень при фокусе */
 }
 
+/* Разделитель между полями */
 .divider {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 50px; /* Устанавливаем конкретную высоту для разделителя */
 }
 
 .divider:before {
     content: '';
     width: 1px;
-    height: 150%; /* Высота вертикальной линии */
-    background-color: #ced4da; /* Серый цвет линии */
+    height: 100%; /* Устанавливаем высоту на 100% от родителя */
+    background-color: #ced4da;
     position: absolute;
-    top: -10px;
+    top: 0; /* Начинаем с верхней части */
 }
 
+/* Разделитель между полями "Туда" и "Обратно" */
+.divider-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px; /* Устанавливаем высоту для выделения пространства */
+}
+
+.divider-small:before {
+    content: '';
+    width: 1px;
+    height: 60%; /* Высота меньше, чем основной разделитель */
+    background-color: #ced4da;
+    position: absolute;
+    top: 20%; /* Отступ сверху для корректного расположения */
+}
+
+/* Иконка смены направления */
 .swap-icon {
-    z-index: 1; /* Иконка поверх линии */
+    z-index: 2; /* Обеспечиваем, что иконка находится поверх других элементов */
     background-color: #fff;
     border: 2px solid #e57373;
     border-radius: 50%;
@@ -146,18 +182,53 @@ ul, li {
     justify-content: center;
     color: #e57373;
     font-size: 16px;
-
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer; /* Добавляем курсор, чтобы он менялся на pointer при наведении */
 }
 
+/* Кнопка внутри иконки */
 .swap-icon button {
     background: none;
     border: none;
     font-size: inherit;
     color: inherit;
-    cursor: pointer;
+    cursor: inherit; /* Наследуем курсор от родителя */
 }
 
-.swap-icon button:hover {
-    background-color: #fce4ec;
-    border-radius: 50%;
+/* Эффект при наведении на иконку */
+.swap-icon:hover {
+    background-color: #fce4ec; /* Изменение фона при наведении */
+    border-color: #f44336; /* Меняем цвет границы при наведении */
+}
+
+.calendar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px; /* Отступ между полем "Обратно" и иконкой */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.calendar-icon svg {
+    fill: #6c757d; /* Цвет иконки */
+    transition: fill 0.3s ease;
+}
+
+.calendar-icon:hover svg {
+    fill: #007bff; /* Цвет иконки при наведении */
+}
+
+.search-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #b71c1c;
 }
