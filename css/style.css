@@ -292,6 +292,7 @@ main {
 }
 
 .popular-destinations {
+    align-self: flex-start;
     flex: 2;
 }
 
@@ -351,7 +352,7 @@ main {
     align-items: center;
     padding: 10px 0;
     font-size: 14px;
-    color: #666666;
+    color: #007bff;
     border-bottom: 1px solid #eaeaea;
 }
 
@@ -435,61 +436,61 @@ main {
     height: auto;
 }
 
-/*section-question*/
-.section-question-wrapper {
+/*section-information*/
+.section-information-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.section_question_header {
+.section_information_header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.section_question_header h3:nth-child(2) {
+.section_information_header h3:nth-child(2) {
     margin-right: 230px;
 }
 
-.section-question {
+.section-information {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+}
+
+.section-sales {
+    align-self: flex-start;
+    flex: 2;
+}
+
+.section-question {
+    align-self: flex-start;
+    flex: 1;
 }
 
 .sales, .questions {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 40px;
 }
 
-.sales {
-    flex: 2;
+.best-price {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 20px;
 }
 
-.questions {
-    flex: 1;
+.sales-item {
+    padding: 4px;
 }
 
-.sales ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.sales ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+.sales-item p {
     font-size: 14px;
     color: #666666;
-    background-color: #ffffff;
 }
 
 .price {
@@ -508,23 +509,5 @@ main {
     align-items: center;
     padding: 10px 0;
     font-size: 14px;
-    color: #666666;
-    border-bottom: 1px solid #eaeaea;
+    color: #007bff;
 }
-
-.questions ul li:last-child {
-    border-bottom: none;
-}
-
-.top-airlines ul li span {
-    margin-left: auto;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.star {
-    color: red;
-}
-
