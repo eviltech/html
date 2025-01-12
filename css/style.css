@@ -251,27 +251,36 @@ ul, li {
     justify-content: center; /* Центрируем текст по вертикали и горизонтали */
 }
 
+main {
+    background-color: #f5f7fa;
+}
+
 .news {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-color: #f5f7fa;
 }
 
-.section {
+.section-destinations-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-destinations {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.section_header {
+.section_destinations_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.section_header h3:nth-child(2) {
+.section_destinations_header h3:nth-child(2) {
     margin-left: 400px;
 }
 
@@ -426,7 +435,8 @@ ul, li {
     height: auto;
 }
 
-.section-wrapper {
+/*section-question*/
+.section-question-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
