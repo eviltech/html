@@ -512,22 +512,101 @@ main {
     color: #007bff;
 }
 
-.card-price {
+.price-card-section {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.card-price-content {
-    max-width: 60%;
+.price-card {
+    background-color: #eaeaff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.card-price-content h3 {
+.price-card .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.price-card .title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.price-card h2 {
     font-size: 18px;
-    margin: 0 0 10px;
-    color: #333333;
+    color: #333;
+    margin: 0;
 }
 
-.card-price-content img {
-    max-width: 100px;
-    height: auto;
+.price-card .image-block {
+    margin-left: 10px;
+}
+
+.price-card .image-block img {
+    width: 100px;
+}
+
+.price-card .input-container {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.price-card input {
+    flex: 1;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #e84e4e;
+    border-radius: 5px;
+    outline: none;
+}
+
+.price-card input:focus {
+    border-color: #ff6161;
+}
+
+.price-card .error-icon {
+    position: absolute;
+    top: -10px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: #e84e4e;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.price-card .submit-button {
+    background-color: #ff4e4e;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.price-card .submit-button svg {
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+    transform: rotate(90deg);
 }
