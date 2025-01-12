@@ -511,3 +511,23 @@ main {
     font-size: 14px;
     color: #007bff;
 }
+
+.card-price {
+    display: flex;
+    gap: 20px;
+}
+
+.card-price-content {
+    max-width: 60%;
+}
+
+.card-price-content h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333333;
+}
+
+.card-price-content img {
+    max-width: 100px;
+    height: auto;
+}
