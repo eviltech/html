@@ -94,6 +94,7 @@ ul, li {
     display: flex;
     align-items: stretch;  /* Растягиваем элементы по высоте */
     gap: 10px; /* Отступ между формой и кнопкой */
+    flex-wrap: wrap; /* Разрешаем обтекание элементов */
 }
 
 .search-form {
@@ -105,6 +106,7 @@ ul, li {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     gap: 10px;
     flex-grow: 1; /* Форма будет растягиваться по ширине */
+    max-width: calc(100% - 130px); /* Ограничение ширины формы, чтобы кнопка не выходила */
 }
 
 /* Группы полей ввода */
@@ -232,6 +234,8 @@ ul, li {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    max-width: 120px; /* Ограничение ширины кнопки */
+    white-space: nowrap; /* Предотвращаем перенос текста */
 }
 
 /* Эффект при наведении на кнопку "Найти" */
