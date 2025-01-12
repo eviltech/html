@@ -249,9 +249,103 @@ ul, li {
 
 .news {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
     background-color: #f5f7fa;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.popular-destinations, .top-airlines {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.popular-destinations h3, .top-airlines h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.popular-destinations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.popular-destinations ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #666666;
+    background-color: #ffffff;
+}
+
+.price {
+    color: #ff5a5f;
+}
+
+.top-airlines ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-airlines ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.top-airlines ul li:last-child {
+    border-bottom: none;
+}
+
+.top-airlines ul li span {
+    margin-left: auto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star {
+    color: #fbbc04;
+}
+
+.more-link {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
 }
 
 .card {
@@ -311,4 +405,10 @@ ul, li {
 .card-image img {
     max-width: 100px;
     height: auto;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
