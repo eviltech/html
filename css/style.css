@@ -441,3 +441,90 @@ main {
     flex-direction: column;
     gap: 20px;
 }
+
+.section_question_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section_question_header h3:nth-child(2) {
+    margin-right: 230px;
+}
+
+.section-question {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sales, .questions {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sales {
+    flex: 2;
+}
+
+.questions {
+    flex: 1;
+}
+
+.sales ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.sales ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #666666;
+    background-color: #ffffff;
+}
+
+.price {
+    color: #ff5a5f;
+}
+
+.questions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.questions ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666666;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.questions ul li:last-child {
+    border-bottom: none;
+}
+
+.top-airlines ul li span {
+    margin-left: auto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star {
+    color: red;
+}
+
