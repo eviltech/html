@@ -265,15 +265,32 @@ ul, li {
     gap: 20px;
 }
 
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_header h3:nth-child(2) {
+    margin-left: 400px;
+}
+
 .popular-destinations, .top-airlines {
-    flex: 1;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
-.popular-destinations h3, .top-airlines h3 {
+.popular-destinations {
+    flex: 2;
+}
+
+.top-airlines {
+    flex: 1;
+}
+
+.section_header h3 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #333333;
