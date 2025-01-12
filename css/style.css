@@ -513,6 +513,7 @@ main {
 }
 
 .price-card-section {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -608,5 +609,5 @@ main {
     width: 15px;
     height: 15px;
     fill: #fff;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
