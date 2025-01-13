@@ -684,6 +684,25 @@ main {
     padding-top: 10px;
 }
 
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Разделяет элементы по краям */
+    align-items: center;
+    gap: 10px; /* Расстояние между иконками */
+    margin-bottom: 20px;
+}
+
+.bank-icons a img {
+    height: 40px;
+    width: 40px;
+
+    transition: transform 0.3s;
+}
+
+.bank-icons a img:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
 .footer-left {
     display: flex;
     align-items: center;
