@@ -831,3 +831,7 @@ main {
 .close-icon:hover {
     color: red; /* Серый цвет */
 }
+
+.selected_сity {
+    display: none;
+}

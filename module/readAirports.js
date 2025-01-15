@@ -11,13 +11,9 @@ const data = {
 // Создаем новый Map
 const airportMap = new Map();
 
-export default function getAirports() {
+export default function readAirports() {
     data.airports.forEach(airport => {
         airportMap.set(airport.city, airport.code);
     });
     return airportMap;
 }
-
-
-// Выводим содержимое Map
-console.log(airportMap);
