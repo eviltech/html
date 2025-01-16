@@ -1,0 +1,9 @@
+{
+  "airports": [
+    { "city": "Варшава", "code": "WAW" },
+    { "city": "Вильнюс", "code": "VNO" },
+    { "city": "Саудовская Аравия", "code": "ABT" },
+    { "city": "Австралия", "code": "ABX" },
+    { "city": "Мексика", "code": "ACA" }
+  ]
+}
