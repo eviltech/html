@@ -44,6 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     console.log(dropdownItems);
 
+    function clickDD() {
+        fromDropdown.addEventListener("click", (e) => {
+            console.log("fromDropdown");
+        });
+    }
+
+    clickDD();
+
+    toDropdown.addEventListener("click", (e) => {
+        console.log("toDropdown");
+    });
+
     dropdownItems.forEach(item => {
         item.addEventListener('click', (event) => {
             // Находим элемент с названием аэропорта внутри текущего dropdown-item
