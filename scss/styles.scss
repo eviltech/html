@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$white-color: #ffffff;
+$gray-color: #cccccc;
+$background-color: #8000ff;
+$text-color: #ffccff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: $background-color;
+  color: $text-color;
+  text-align: left;
+  padding: 20px;
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+
+    .menu__item {
+      text-decoration: none;
+      color: $white-color;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $gray-color; // Изменение цвета при наведении
+      }
+
+      // Стрелка добавляется только к пунктам с подменю
+      &:not(:first-child)::after {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
+        margin-left: 5px;
+        display: inline-block;
+      }
+
+      &.menu__language::before {
+        content: url(../img/icons/world.svg);
+        margin-right: 5px;
+        width: 24px; // Установите ширину
+        height: 24px; // Установите высоту
+        filter: invert(1);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left; // Выровнено по левому краю
+  }
+}
+
+// Анимации для эффекта появления/исчезновения
+@keyframes fade-in {
+  from {
+    color: $white-color;
+  }
+  to {
+    color: $gray-color;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    color: $gray-color;
+  }
+  to {
+    color: $white-color;
+  }
+}
+
+// Применение анимации при наведении
+.menu__item:hover {
+  animation: fade-in 0.3s forwards;
+}
+.menu__item:not(:hover) {
+  animation: fade-out 0.3s forwards;
+}
