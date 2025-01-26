@@ -25,6 +25,71 @@ body {
   color: $text-color;
   text-align: left;
   padding: 20px;
+  position: relative;
+
+  &__hamburger {
+    display: none; // По умолчанию гамбургер-меню скрыто
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001; // Чтобы гамбургер был выше мобильного меню
+
+    @media (max-width: 768px) {
+      display: flex; // Показываем гамбургер-меню на мобильных устройствах
+    }
+
+    .hamburger__line {
+      width: 25px;
+      height: 3px;
+      background-color: $white-color;
+      margin: 4px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    // Анимация для гамбургера при открытии меню
+    &.active {
+      .hamburger__line:nth-child(1) {
+        transform: translateX(-10px) translateY(11px) rotate(90deg); // Смещаем влево
+      }
+      .hamburger__line:nth-child(2) {
+        transform: translateX(0) rotate(90deg); // Оставляем по центру
+      }
+      .hamburger__line:nth-child(3) {
+        transform: translateX(10px) translateY(-11px) rotate(90deg); // Смещаем вправо
+      }
+    }
+  }
+
+  &__mobile-menu {
+    display: none; // По умолчанию мобильное меню скрыто
+    flex-direction: column;
+    background-color: #8024e0;
+    position: absolute;
+    top: 60px; // Позиционируем меню под header__hamburger
+    width: 200px; // Ширина мобильного меню
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      display: none; // Оставляем скрытым по умолчанию
+    }
+
+    &.active {
+      display: flex; // Показываем мобильное меню при активации
+    }
+
+    .menu__item {
+      margin: 10px 0;
+      color: $white-color;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: left;
+
+      &:hover {
+        color: $gray-color;
+      }
+    }
+  }
 
   &__menu {
     display: flex;
@@ -34,6 +99,9 @@ body {
     margin-bottom: 20px;
     padding-right: 20px;
     font-size: 14px;
+    @media (max-width: 768px) {
+      display: none; // Скрываем обычное меню на мобильных устройствах
+    }
 
     .menu__item {
       text-decoration: none;
@@ -45,10 +113,9 @@ body {
       transition: color 0.3s ease;
 
       &:hover {
-        color: $gray-color; // Изменение цвета при наведении
+        color: $gray-color;
       }
 
-      // Стрелка добавляется только к пунктам с подменю
       &:not(:first-child)::after {
         content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5z"/></svg>');
         margin-left: 5px;
@@ -69,7 +136,11 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
-    text-align: left; // Выровнено по левому краю
+    text-align: left;
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      font-size: 20px; // Скрываем обычное меню на мобильных устройствах
+    }
   }
 }
 
