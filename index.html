@@ -9,7 +9,6 @@
 <body>
 <header class="header">
     <div class="container">
-        <!-- Обычное меню -->
         <div class="header__menu">
             <a href="#" class="menu__item">Корпоративным клиентам</a>
             <a href="#" class="menu__item">Авиабилеты</a>
@@ -17,14 +16,12 @@
             <a href="#" class="menu__item menu__language">Русский</a>
         </div>
 
-        <!-- Гамбургер-меню -->
         <div class="header__hamburger">
             <div class="hamburger__line"></div>
             <div class="hamburger__line"></div>
             <div class="hamburger__line"></div>
         </div>
 
-        <!-- Мобильное меню -->
         <div class="header__mobile-menu">
             <a href="#" class="menu__item">Корпоративным клиентам</a>
             <a href="#" class="menu__item">Авиабилеты</a>
@@ -33,6 +30,40 @@
         </div>
 
         <h1 class="header__title">Лучшие авиабилеты по самым низким ценам</h1>
+        <nav class="search-form">
+            <div class="search-form__container">
+                <div class="search-form__fields">
+                    <div class="search-form__field">
+                        <label>Откуда</label>
+                        <input type="text" placeholder="Варшава">
+                    </div>
+                    <div class="search-form__separator"></div> <!-- Первый разделитель -->
+                    <div class="search-form__field">
+                        <label>Куда</label>
+                        <input type="text" placeholder="Куда">
+                    </div>
+                    <div class="search-form__separator"></div> <!-- Второй разделитель -->
+                    <div class="search-form__field">
+                        <label>Туда</label>
+                        <input type="date">
+                    </div>
+                    <div class="search-form__separator"></div> <!-- Третий разделитель -->
+                    <div class="search-form__field">
+                        <label>Обратно</label>
+                        <input type="date">
+                    </div>
+                    <div class="search-form__separator"></div> <!-- Четвертый разделитель -->
+                    <div class="search-form__field">
+                        <label>Пассажиры, класс</label>
+                        <input type="text" placeholder="1 пассажир, любой">
+                    </div>
+                </div>
+
+                <div class="search-form__submit">
+                    <button type="submit">Найти</button>
+                </div>
+            </div>
+        </nav>
     </div>
 </header>
 

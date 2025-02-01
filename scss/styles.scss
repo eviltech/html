@@ -142,6 +142,84 @@ body {
       font-size: 20px; // Скрываем обычное меню на мобильных устройствах
     }
   }
+
+  .search-form {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    &__fields {
+      display: flex;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 12px;
+        color: #666;
+      }
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        width: 150px;
+      }
+    }
+
+    &__separator, &__short-separator {
+      width: 2px;
+      background: #ccc;
+    }
+
+    &__separator {
+      height: 40px;
+    }
+
+    &__short-separator {
+      height: 20px;
+    }
+
+    &__swap {
+      background: none;
+      border: none;
+      color: #ff4d4d;
+      padding: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    &__submit {
+      margin-left: 10px;
+      button {
+        background: #ff3366;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        height: 100%;
+        min-width: 120px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
 }
 
 // Анимации для эффекта появления/исчезновения
